@@ -9,7 +9,7 @@ from tensorflow.keras.callbacks import EarlyStopping
 import numpy as np
 
 
-df = pd.read_csv('dataset(in).csv', delimiter=';')  # Убедитесь, что путь к файлу правильный
+df = pd.read_csv('dataset(in).csv', delimiter=';')  
 
 
 bool_columns = ['firstBlood', 'firstTower', 'firstBaron', 'firstDragon', 'firstRiftHerald']  # Укажите все булевые столбцы
