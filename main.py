@@ -12,7 +12,7 @@ import numpy as np
 df = pd.read_csv('dataset(in).csv', delimiter=';')  
 
 
-bool_columns = ['firstBlood', 'firstTower', 'firstBaron', 'firstDragon', 'firstRiftHerald']  # Укажите все булевые столбцы
+bool_columns = ['firstBlood', 'firstTower', 'firstBaron', 'firstDragon', 'firstRiftHerald']  
 for col in bool_columns:
     df[col] = df[col].map({True: 1, False: 0})
 
@@ -27,7 +27,7 @@ df.drop(columns=['dominionVictoryScore'], inplace=True)
 
 
 scaler = MinMaxScaler()
-num_cols = df.select_dtypes(include=['float64', 'int64']).columns.tolist()  # Выбор всех числовых колонок
+num_cols = df.select_dtypes(include=['float64', 'int64']).columns.tolist() 
 df[num_cols] = scaler.fit_transform(df[num_cols])
 
 
